@@ -22,22 +22,22 @@ class Telefono : EncendidoApagado, DispositivoElectronico {
     override fun encender() {
         if (!encendido) {
             encendido = true
-            println("📱 Teléfono encendido")
+            println("Teléfono encendido")
         }
     }
 
     override fun apagar() {
         if (encendido) {
             encendido = false
-            println("📱 Teléfono apagado")
+            println("Teléfono apagado")
         }
     }
 
     override fun reiniciar() {
         if (encendido) {
-            println("🔄 Reiniciando teléfono...")
+            println("Reiniciando teléfono...")
         } else {
-            println("⚠️ No se puede reiniciar, el teléfono está apagado.")
+            println("No se puede reiniciar, el teléfono está apagado.")
         }
     }
 }
@@ -47,19 +47,19 @@ class Lavadora : EncendidoApagado, DispositivoElectronico {
 
     override fun encender() {
         encendida = true
-        println("🧺 Lavadora encendida")
+        println("Lavadora encendida")
     }
 
     override fun apagar() {
         encendida = false
-        println("🧺 Lavadora apagada")
+        println("Lavadora apagada")
     }
 
     override fun reiniciar() {
         if (encendida) {
-            println("🔄 Lavadora reiniciada")
+            println("Lavadora reiniciada")
         } else {
-            println("⚠️ No se puede reiniciar, la lavadora está apagada.")
+            println("No se puede reiniciar, la lavadora está apagada.")
         }
     }
 }
@@ -70,28 +70,28 @@ class Coche : EncendidoApagado, Vehiculo {
 
     override fun encender() {
         motorEncendido = true
-        println("🚗 Coche encendido")
+        println("Coche encendido")
     }
 
     override fun apagar() {
         motorEncendido = false
         kmHora = 0
-        println("🚗 Coche apagado")
+        println("Coche apagado")
     }
 
     override fun acelerar(aumento: Int) {
         if (motorEncendido) {
             kmHora += aumento
-            println("🚗 Acelerando... Velocidad actual: ${kmHora} km/h")
+            println("Acelerando... Velocidad actual: ${kmHora} km/h")
         } else {
-            println("⚠️ No se puede acelerar, el motor está apagado.")
+            println("No se puede acelerar, el motor está apagado.")
         }
     }
 
     override fun frenar(disminucion: Int) {
         kmHora -= disminucion
         if (kmHora < 0) kmHora = 0
-        println("🚗 Frenando... Velocidad actual: ${kmHora} km/h")
+        println("Frenando... Velocidad actual: ${kmHora} km/h")
     }
 }
 
